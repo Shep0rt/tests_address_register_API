@@ -1,0 +1,1 @@
+rootProject.name = "tests_address_register_API"
