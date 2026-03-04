@@ -42,7 +42,7 @@ class ToponymPathSmokeTest {
     }
 
     @Test
-    @DisplayName("GET /toponym-path возвращает валидный JSON-контракт")
+    @DisplayName("GET /toponym-path возвращает валидную строку")
     @Description("Проверяет, что при localityId=106724 сервис возвращает строку в теле ответа")
     @Severity(SeverityLevel.CRITICAL)
     void shouldReturnValidJsonContract() {
