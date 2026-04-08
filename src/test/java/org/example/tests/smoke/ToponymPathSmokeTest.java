@@ -72,9 +72,9 @@ class ToponymPathSmokeTest {
         );
 
         ApiClient clientWithoutApiKey = new ApiClient(ApiSpecificationFactory.create(configWithoutApiKey));
-        ToponymPathService unauthService = new ToponymPathService(new ToponymPathClient(clientWithoutApiKey));
+        ToponymPathService unauthenticService = new ToponymPathService(new ToponymPathClient(clientWithoutApiKey));
 
-        Response response = unauthService.getToponymPath(LOCALITY_ID_VALID);
+        Response response = unauthenticService.getToponymPath(LOCALITY_ID_VALID);
 
         assertThat(Set.of(401, 403)).contains(response.statusCode());
     }
