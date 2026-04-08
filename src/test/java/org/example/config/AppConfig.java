@@ -23,7 +23,6 @@ public record AppConfig(
 
         try (InputStream inputStream = AppConfig.class.getClassLoader().getResourceAsStream("application.properties")) {
             if (inputStream != null) {
-                // Явно читаем properties как UTF-8, чтобы поддерживать кириллицу.
                 properties.load(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
             }
         } catch (IOException e) {
